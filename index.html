@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+<div class="loader_bg" id="loader">
+    <span class="loader"></span>
+</div>
+ 
+<div class="container_fluid">
+    <div class="container">
+        
+        <div class="category_section">
+            <div class="category_left">
+                <h3>Filters</h3>
+                <h4>Categories</h4>
+                <ul id="filter_category"></ul>
+            </div>
+            <div class="category_right">
+                <div class="msg" id="msg"></div>
+                <div class="search_box"> <input type="search" onkeyup="_handleSearchKeywords(this)" /></div>
+                <div class="top_filters">
+                   
+                    <div class="total_products"><span id="total_products"></span></div>
+                    <div class="sorting">
+                        <select id="sort_by_price" onchange="_sortByPrice(this)">
+                            <option value="">Please Select</option>
+                            <option value="plh">Price ( Low to High )</option>
+                            <option value="phl">Price ( High to Low )</option>
+                        </select>
+                    </div>
+                </div>
+                <ul id="category_listing" class="category_listing"></ul>
+                <div class="load_more">
+                    <button onclick="_loadMore()" id="loadMore">Load More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="js/index.js"></script>
+</html>
